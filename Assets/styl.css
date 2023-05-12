@@ -1,0 +1,188 @@
+:root {
+    --dark: #204c66;
+    --light: #fff;
+    --navlink-color: #b9c6ae;
+    --bluegrey: #7ea5b8;
+    --darkgrey: #595959;
+    --black: #000000;
+    --fontsize: 42px;
+}
+
+body {
+    background-color: var(--light);
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px;
+    padding: 0%;
+ }
+
+header {
+   display: inline-block;
+    padding: 20px;
+    background-color: var(--dark);
+    font-size: xx-large;
+    border-color: var(--dark);
+    margin: 0px;  
+}
+.header p {
+    background-color: var(--light);
+    margin-left: 30px;
+}
+.Subtitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin: 0px;
+    width: 100%; 
+ }
+ 
+nav {
+width: 100%;
+display: flex;
+justify-content: end;
+margin: 0 50px 0 0;
+color: var(--black);
+}
+nav :hover {
+    cursor: pointer;
+}
+
+.nav-links-left {
+    background-color: var(--light);
+    border-radius: 15px 0 0 15px; 
+}
+.nav-links-inner-left {
+    background-color: var(--light);
+}
+.nav-links-inner-right {
+    background-color: var(--light);
+}
+.nav-links-right {
+    background-color: var(--light); 
+    border-radius: 0 15px 15px 0; 
+}
+    
+
+
+ 
+
+ .AboutMe {
+   display: flex;
+   flex-direction: row;
+   margin-right: 25px;
+ }
+
+ .AboutMe h2{
+    font-size: var(--fontsize);
+    margin-right: 25px;
+    width: 300px;
+    margin-left: 25px;
+    border-right: #000000;
+    
+ }
+
+ .AboutMe p {
+    font-size: large;
+    margin-left: 25px;
+    align-self: center;
+ }
+
+
+
+
+.Work {
+    display: flex;
+    flex-direction: row;
+    
+ }
+
+.Work h2{
+    font-size: var(--fontsize);
+    margin-right: 25px;
+    width: 300px;
+    margin-left: 25px;
+    
+ }
+ .Work1 {
+    
+ }
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+
+ }
+
+.main-project {
+    display:flex;
+    flex-direction: column;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    border: 10mm ridge var(--bluegrey);
+    border-radius: 15px;
+    height: 200px;
+}
+
+.picture {
+    height: 200px;
+}
+.small-project {
+    display:flex;
+    flex-direction: row;
+}
+
+.card{
+    border: 4mm ridge var(--bluegrey);
+    margin: 25px 50px 25px 25px;
+    border-radius: 15px;
+}
+
+.Contact {
+   display: flex;
+   justify-content: row;
+   align-items: end;
+   margin-top: 50px;
+   margin-left: 25px;
+   font-size: xx-large;
+}
+.Contact1 {
+    align-self: inline;
+    align-self: center;
+    font-size: large;
+  
+}
+ul {
+    display: inline-block;
+    list-style-type: none;
+    justify-content: center;
+}
+li {
+    float: left;
+    margin: 20px;
+  }
+li:hover{
+    background-color: #b9c6ae;
+    border-radius: 10px;
+    cursor: grab;
+    padding: 5px;
+}
+li:active {
+    font-size: 180%;
+    box-shadow: 0 0 10px black;
+}
+li:focus {
+    outline-style: double;
+    border-color: #595959;
+}
+
+@media screen and (max-width: 768px) {
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+    main,
+    nav,
+    ul,
+    .small-project {
+      flex-direction: column;
+    }
+  }
+  
