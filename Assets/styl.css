@@ -13,20 +13,22 @@ body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0px;
     padding: 0%;
- }
+}
 
 header {
-   display: inline-block;
+    display: inline-block;
     padding: 20px;
     background-color: var(--dark);
     font-size: xx-large;
     border-color: var(--dark);
-    margin: 0px;  
+    margin: 0px;
 }
+
 .header p {
     background-color: var(--light);
     margin-left: 30px;
 }
+
 .Subtitle {
     display: flex;
     flex-direction: row;
@@ -34,59 +36,63 @@ header {
     align-items: center;
     color: black;
     margin: 0px;
-    width: 100%; 
- }
- 
-nav {
-width: 100%;
-display: flex;
-justify-content: end;
-margin: 0 50px 0 0;
-color: var(--black);
+    width: 100%;
 }
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin: 0 50px 0 0;
+    color: var(--black);
+}
+
 nav :hover {
     cursor: pointer;
 }
 
 .nav-links-left {
     background-color: var(--light);
-    border-radius: 15px 0 0 15px; 
+    border-radius: 15px 0 0 15px;
 }
+
 .nav-links-inner-left {
     background-color: var(--light);
 }
+
 .nav-links-inner-right {
     background-color: var(--light);
 }
+
 .nav-links-right {
-    background-color: var(--light); 
-    border-radius: 0 15px 15px 0; 
+    background-color: var(--light);
+    border-radius: 0 15px 15px 0;
 }
-    
 
 
- 
 
- .AboutMe {
-   display: flex;
-   flex-direction: row;
-   margin-right: 25px;
- }
 
- .AboutMe h2{
+
+.AboutMe {
+    display: flex;
+    flex-direction: row;
+    margin-right: 25px;
+}
+
+.AboutMe h2 {
     font-size: var(--fontsize);
     margin-right: 25px;
     width: 300px;
     margin-left: 25px;
     border-right: #000000;
-    
- }
 
- .AboutMe p {
+}
+
+.AboutMe p {
     font-size: large;
     margin-left: 25px;
     align-self: center;
- }
+}
 
 
 
@@ -94,28 +100,27 @@ nav :hover {
 .Work {
     display: flex;
     flex-direction: row;
-    
- }
 
-.Work h2{
+}
+
+.Work h2 {
     font-size: var(--fontsize);
     margin-right: 25px;
     width: 300px;
     margin-left: 25px;
-    
- }
- .Work1 {
-    
- }
+
+}
+
+.Work1 {}
 
 .portfolio {
     display: flex;
     flex-direction: column;
 
- }
+}
 
 .main-project {
-    display:flex;
+    display: flex;
     flex-direction: column;
     margin-right: 25px;
     margin-bottom: 25px;
@@ -127,62 +132,187 @@ nav :hover {
 .picture {
     height: 200px;
 }
+
 .small-project {
-    display:flex;
+    display: flex;
     flex-direction: row;
 }
 
-.card{
-    border: 4mm ridge var(--bluegrey);
-    margin: 25px 50px 25px 25px;
-    border-radius: 15px;
+
+.card {
+    --b: .5em;
+    /* border width */
+    --c: 3em;
+    /* corner size */
+    --r: 2em;
+    /* corner rounding */
+    position: relative;
+    margin: 1em auto;
+    border: solid var(--b) transparent;
+    padding: 1em;
+    max-width: 23em;
+    font: 1.25em ubuntu, sans-serif;
 }
 
-.Contact {
-   display: flex;
-   justify-content: row;
-   align-items: end;
-   margin-top: 50px;
-   margin-left: 25px;
-   font-size: xx-large;
+.card::before {
+    position: absolute;
+    z-index: -1;
+    inset: calc(-1*var(--b));
+    border: inherit;
+    border-radius: var(--r);
+    background: linear-gradient(rgb(246, 240, 231), rgb(87, 86, 86), rgb(13, 13, 13)) border-box;
+    --corner:
+        conic-gradient(from -90deg at var(--c) var(--c), red 25%, #0000 0) 0 0/ calc(100% - var(--c)) calc(100% - var(--c)) border-box;
+    --inner: conic-gradient(red 0 0) padding-box;
+    -webkit-mask: var(--corner), var(--inner);
+    -webkit-mask-composite: source-out;
+    mask: var(--corner) subtract, var(--inner);
+    content: "";
 }
+
+
+.Contact {
+    display: flex;
+    justify-content: row;
+    align-items: end;
+    margin-top: 50px;
+    margin-left: 25px;
+    font-size: xx-large;
+}
+
 .Contact1 {
     align-self: inline;
     align-self: center;
     font-size: large;
-  
+
 }
+
 ul {
     display: inline-block;
     list-style-type: none;
     justify-content: center;
 }
+
 li {
     float: left;
     margin: 20px;
-  }
-li:hover{
+}
+
+li:hover {
     background-color: #b9c6ae;
     border-radius: 10px;
     cursor: grab;
     padding: 5px;
 }
+
 li:active {
     font-size: 180%;
     box-shadow: 0 0 10px black;
 }
+
 li:focus {
     outline-style: double;
     border-color: #595959;
 }
 
 @media screen and (max-width: 768px) {
+
     /* Use flex-direction to stack the navbar, sidebar, and body */
     main,
     nav,
     ul,
     .small-project {
-      flex-direction: column;
+        flex-direction: column;
     }
+}
+
+
+/* recipe border idea */
+.container {
+    border-top-left-radius: 37px 140px;
+    border-top-right-radius: 23px 130px;
+    border-bottom-left-radius: 110px 19px;
+    border-bottom-right-radius: 120px 24px;
+  
+    display: block;
+    position: relative;
+    border: solid 3px #6e7491;
+    padding: 40px 60px;
+    max-width: 800px;
+    width: 70%;
+    margin: 100px auto 0;
+    font-size: 17px;
+    line-height: 28px;
+    transform: rotate(-1deg);
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+    transition: all 0.13s ease-in;
   }
+  
+  .container:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .container:hover .border {
+    transform: translateY(4px) rotate(-5deg);
+  }
+  
+  .border {
+    position: absolute;
+    transition: all 0.13s ease-in;
+  }
+  
+  /* Border that glows where mouse touches */
+ 
+  #btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+.button {  
+	--x: 50%;
+	--y: 50%;
+	position: relative;
+	appearance: none;
+	padding: 1em 2em;
+	color: white;
+	cursor: pointer;
+	outline: none;
+	border-radius: 100px;
+	
+	border: 8px solid transparent;
+	background: linear-gradient(#000, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
+}
+
+/* Border highlights an edge */
+.thing {
+    padding: 1rem;
+    width: 420px;
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+      0 5px 15px 0 rgba(0,0,0,0.08);
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    
+    border-left: 0 solid #00ff99;
+    transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+  }
+  
+  .thing:hover {
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid #00ff99;
+  }
+  
+  .thing > :first-child {
+    margin-top: 0;
+  }
+  
+  .thing > :last-child {
+    margin-bottom: 0;
+  }
+  
+  .heading {
+    color: #fff;
+  }
+  /* click me */
   

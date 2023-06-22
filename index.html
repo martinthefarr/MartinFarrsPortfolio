@@ -11,7 +11,7 @@
 <body>
 
     <header class="Subtitle">
-      <p>Martin Farr's Portfolio</p>  
+        <p>Martin Farr's Portfolio</p>
 
         <nav>
             <ul class="nav-links-left"> <a href="#About Me">About Me</a> </ul>
@@ -25,9 +25,16 @@
 
 
     <section class="AboutMe" id="About Me">
-        
+
         <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos nobis, consequuntur placeat aspernatur officiis magni ipsa accusamus eum amet ullam eveniet, quidem molestiae aliquid modi. Eius exercitationem cum amet laboriosam quasi quo rerum, explicabo consequuntur debitis natus odio reiciendis temporibus obcaecati sapiente vero aperiam veritatis. Amet obcaecati tempora provident aliquid, repellat repudiandae quam delectus tenetur reprehenderit, consectetur nisi, quisquam labore laborum vero nam quo laudantium distinctio consequatur. Corrupti, iste rem ipsa debitis in iure omnis asperiores adipisci, ratione illo suscipit nobis tenetur numquam et? Quidem corporis vitae aliquam in nihil voluptate ad reiciendis eos, maxime repellat laudantium, hic placeat.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos nobis, consequuntur placeat aspernatur
+            officiis magni ipsa accusamus eum amet ullam eveniet, quidem molestiae aliquid modi. Eius exercitationem cum
+            amet laboriosam quasi quo rerum, explicabo consequuntur debitis natus odio reiciendis temporibus obcaecati
+            sapiente vero aperiam veritatis. Amet obcaecati tempora provident aliquid, repellat repudiandae quam
+            delectus tenetur reprehenderit, consectetur nisi, quisquam labore laborum vero nam quo laudantium distinctio
+            consequatur. Corrupti, iste rem ipsa debitis in iure omnis asperiores adipisci, ratione illo suscipit nobis
+            tenetur numquam et? Quidem corporis vitae aliquam in nihil voluptate ad reiciendis eos, maxime repellat
+            laudantium, hic placeat.</p>
     </section>
 
 
@@ -36,7 +43,7 @@
         <h2>Work</h2>
         <main class="portfolio">
             <div class="main-project">
-                <img  class="picture" src="Assets/images/background city raindrops.jpg" alt="city raindrops">
+                <img class="picture" src="Assets/images/background city raindrops.jpg" alt="city raindrops">
                 <dt class="Work1">Lorem ipsum dolor sit amet.</dt>
             </div>
 
@@ -53,13 +60,13 @@
                 </div>
 
                 <div class="card">
-                    <h2>HTML CSS JS</h2>
+                    <h2>First Project</h2>
                     <img src="Assets/images/background planks.jpg" alt="wooden planks">
-                    <dt class="Work3">The URL of the deployed application.
-                        https://leahanders820.github.io/Food-and-Joke/
-                        
-                        The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-                         https://github.com/leahanders820/Food-and-Joke</dt>
+                    <p class="Work3">The URL of the deployed application. <br>
+                        https://leahanders820.github.io/Food-and-Joke/</p>
+                    <p>The URL of the GitHub repository. <br>
+                         https://github.com/leahanders820/Food-and-Joke</p>
+                    </p>
                 </div>
             </div>
 
@@ -82,7 +89,40 @@
             </div>
         </main>
     </section>
+    <div class="container">
 
+        <span class="border tl">border-top-left</span>
+        <span class="border tr">border-top-right</span>
+        <span class="border bl">border-bottom-left</span>
+        <span class="border br">border-bottom-right</span>
+
+        <h1>Multiple Border-Radius Values</h1>
+
+        <p>You probably knew that you can set the border-radius of an element to 4 values, and using shorthand, it goes
+            clock-wise from top, right, bottom, left.</p>
+
+        <p>But did you know you can actually set up to 8 values if you separate them? Each corner can have 2 values as
+            you can see in this example.</p>
+
+        <pre>
+        .container {
+            border-top-left-radius: 37px 140px;
+            border-top-right-radius: 23px 130px;
+            border-bottom-left-radius: 110px 19px;
+            border-bottom-right-radius: 120px 24px;
+          }</pre>
+
+    </div>
+    <div class="thing">
+        <h2>a little title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ab tenetur at delectus aspernatur similique modi, est, debitis sit voluptate dolorem eligendi odio laborum magni nesciunt? Aliquam omnis molestiae at.</p>
+      </div>
+      
+      <h1 class="heading"> Hover Me 👆</h1>
+    <div id="btn">
+        <button class="button">Hover me and look at my border</button>
+    </div>
+    
 
     <dt class="Contact" id="Contact Me">
         <h3>Contact Me</h3>
@@ -118,7 +158,7 @@
 
 
 
-
+    <script src="./Assets/script.js"></script>
 
 </body>
 
